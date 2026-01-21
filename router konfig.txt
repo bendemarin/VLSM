@@ -1,0 +1,41 @@
+router alapkonfig:
+
+ena
+clock set 12:00:00 21 jan 2026
+conf t
+
+hostnme R1
+security pass min-lenght 8
+login block for 120 att 3 within 60
+enable secret class123
+no ip domain-lookup
+
+line console 0
+password cisco123
+login
+loggin syn
+exec-timeout 5
+exit
+
+line vty 0 15
+password cisco123
+login
+exec-timneout 5
+exit
+
+ser pass-encry
+banner motd #Privat terulet!#
+
+interface
+
+ip domain-name gyak.hu
+cry k generate rsa 2048
+username admin_Perth privilige 15 pass QWasdf/789
+ip ssh ver 2
+line vty 0 15
+login local
+transport input ssh
+exit
+exit
+
+coppy running-config startup config
