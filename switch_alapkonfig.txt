@@ -36,3 +36,120 @@ exit
 exit
 
 copy running-config startup config
+----------------------------------------------------------------------
+ena
+clock set 12:00:00 22 jan 2026
+conf t
+
+hostnme Sw2
+enable secret class123
+no ip domain-lookup
+
+line console 0
+password cisco123
+login
+loggin syn
+exec-timeout 5
+exit
+
+ser pass-encry
+banner motd #Privat terulet!#
+
+interface vlan 1
+ip add 192.168.50.64 255.255.255.224
+no sh
+exit
+
+ip default-gateway 192.168.50.65
+no ip domain-lookup
+
+ip domain-name gyak.hu
+cry k generate rsa 2048
+username admin_Perth privilige 15 pass QWasdf/789
+
+ip ssh ver 2
+line vty 0 15
+login local
+transport input ssh
+exit
+exit
+
+copy running-config startup config
+-------------------------------------------------------------
+ena
+clock set 12:00:00 22 jan 2026
+conf t
+
+hostnme Sw3
+enable secret class123
+no ip domain-lookup
+
+line console 0
+password cisco123
+login
+loggin syn
+exec-timeout 5
+exit
+
+ser pass-encry
+banner motd #Privat terulet!#
+
+interface vlan 1
+ip add 192.168.50.110 255.255.255.240
+no sh
+exit
+
+ip default-gateway 192.168.50.97
+no ip domain-lookup
+
+ip domain-name gyak.hu
+cry k generate rsa 2048
+username admin_Perth privilige 15 pass QWasdf/789
+
+ip ssh ver 2
+line vty 0 15
+login local
+transport input ssh
+exit
+exit
+
+copy running-config startup config
+--------------------------------------------------------------
+ena
+clock set 12:00:00 22 jan 2026
+conf t
+
+hostnme Sw4
+enable secret class123
+no ip domain-lookup
+
+line console 0
+password cisco123
+login
+loggin syn
+exec-timeout 5
+exit
+
+ser pass-encry
+banner motd #Privat terulet!#
+
+interface vlan 1
+ip add 192.168.50.126 255.255.255.240
+no sh
+exit
+
+ip default-gateway 192.168.50.113
+no ip domain-lookup
+
+ip domain-name gyak.hu
+cry k generate rsa 2048
+username admin_Perth privilige 15 pass QWasdf/789
+
+ip ssh ver 2
+line vty 0 15
+login local
+transport input ssh
+exit
+exit
+
+copy running-config startup config
