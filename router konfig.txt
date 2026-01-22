@@ -26,17 +26,17 @@ ser pass-encry
 banner motd #Privat halozat!#
 
 int s0/1/0
-ip add 198.168.50.1 255.255.255.192
+ip add 198.168.50.129 255.255.255.252
 desc perth router fele
 no sh
 
 int s0/2/0
-ip add 198.168.50.65 255.255.255.224
+ip add 198.168.50.133 255.255.255.252
 desc sydney router fele
 no sh
 
 int s0/3/0
-ip add 198.168.50.97 255.255.255.240
+ip add 198.168.50.137 255.255.255.252
 desc singapore router fele
 no sh
 exit
@@ -52,6 +52,9 @@ exit
 exit
 
 coppy running-config startup config
+
+
+------------------------------------------------------------------------------------------------------------------------------
 
 
 Perth router konfig
@@ -81,19 +84,122 @@ exit
 ser pass-encry
 banner motd #Privat halozat!#
 
-int s0/1/0
+int g0/0
 ip add 198.168.50.1 255.255.255.192
-desc perth router fele
-no sh
-
-int s0/2/0
-ip add 198.168.50.65 255.255.255.224
-desc sydney router fele
+desc s1 fele
 no sh
 
 int s0/3/0
-ip add 198.168.50.97 255.255.255.240
-desc singapore router fele
+ip add 198.168.50.130 255.255.255.252
+desc kl router fele
+no sh
+exit
+
+ip domain-name gyak.hu
+cry k generate rsa 2048
+username admin_Perth privilige 15 pass QWasdf/789
+ip ssh ver 2
+line vty 0 15
+login local
+transport input ssh
+exit
+exit
+
+coppy running-config startup config
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
+Sydney router konfig
+ena
+clock set 12:00:00 21 jan 2026
+conf t
+
+hostnme R_Sydney
+security pass min-lenght 8
+login block for 120 att 3 within 60
+enable secret class123
+no ip domain-lookup
+
+line console 0
+password cisco123
+login
+loggin syn
+exec-timeout 5
+exit
+
+line vty 0 15
+password cisco123
+login
+exec-timeout 5
+exit
+
+ser pass-encry
+banner motd #Privat halozat!#
+
+int g0/0
+ip add 198.168.50.97 255.255.255.192
+desc perth router fele
+no sh
+
+int s0/3/0
+ip add 198.168.50.134 255.255.255.252
+desc kl router fele
+no sh
+exit
+
+ip domain-name gyak.hu
+cry k generate rsa 2048
+username admin_Perth privilige 15 pass QWasdf/789
+ip ssh ver 2
+line vty 0 15
+login local
+transport input ssh
+exit
+exit
+
+coppy running-config startup config
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
+Singapore router konfig
+ena
+clock set 12:00:00 21 jan 2026
+conf t
+
+hostnme R_Singapore
+security pass min-lenght 8
+login block for 120 att 3 within 60
+enable secret class123
+no ip domain-lookup
+
+line console 0
+password cisco123
+login
+loggin syn
+exec-timeout 5
+exit
+
+line vty 0 15
+password cisco123
+login
+exec-timeout 5
+exit
+
+ser pass-encry
+banner motd #Privat halozat!#
+
+int g0/0
+ip add 198.168.50.113 255.255.255.192
+desc perth router fele
+no sh
+
+int s0/3/0
+ip add 198.168.50.138 255.255.255.252
+desc kl router fele
 no sh
 exit
 
