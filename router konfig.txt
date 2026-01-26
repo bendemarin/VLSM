@@ -3,9 +3,9 @@ ena
 clock set 12:00:00 21 jan 2026
 conf t
 
-hostnme R_KL
-security pass min-lenght 8
-login block for 120 att 3 within 60
+hostname R_KL
+security password min-length 8
+login block-for 120 att 3 within 60
 enable secret class123
 no ip domain-lookup
 
@@ -22,7 +22,7 @@ login
 exec-timeout 5
 exit
 
-ser pass-encry
+ser pass
 banner motd #Privat halozat!#
 
 int s0/1/0
@@ -42,8 +42,9 @@ no sh
 exit
 
 ip domain-name gyak.hu
-cry k generate rsa 2048
-username admin_Perth privilige 15 pass QWasdf/789
+cry k generate rsa
+2048
+username admin_Perth privileg 15 pass QWasdf/789
 ip ssh ver 2
 line vty 0 15
 login local
@@ -62,9 +63,9 @@ ena
 clock set 12:00:00 21 jan 2026
 conf t
 
-hostnme R_Perth
-security pass min-lenght 8
-login block for 120 att 3 within 60
+hostname R_Perth
+security pass min-length 8
+login block-for 120 att 3 within 60
 enable secret class123
 no ip domain-lookup
 
@@ -96,8 +97,9 @@ no sh
 exit
 
 ip domain-name gyak.hu
-cry k generate rsa 2048
-username admin_Perth privilige 15 pass QWasdf/789
+cry key generate rsa 
+2048
+username admin_Perth privileg 15 pass QWasdf/789
 ip ssh ver 2
 line vty 0 15
 login local
@@ -116,9 +118,9 @@ ena
 clock set 12:00:00 21 jan 2026
 conf t
 
-hostnme R_Sydney
-security pass min-lenght 8
-login block for 120 att 3 within 60
+hostname R_Sydney
+security pass min-length 8
+login block-for 120 att 3 within 60
 enable secret class123
 no ip domain-lookup
 
@@ -150,8 +152,9 @@ no sh
 exit
 
 ip domain-name gyak.hu
-cry k generate rsa 2048
-username admin_Perth privilige 15 pass QWasdf/789
+cry k generate rsa
+2048
+username admin_Perth privileg 15 pass QWasdf/789
 ip ssh ver 2
 line vty 0 15
 login local
@@ -170,9 +173,9 @@ ena
 clock set 12:00:00 21 jan 2026
 conf t
 
-hostnme R_Singapore
-security pass min-lenght 8
-login block for 120 att 3 within 60
+hostname R_Singapore
+security pass min-length 8
+login block-for 120 att 3 within 60
 enable secret class123
 no ip domain-lookup
 
@@ -204,8 +207,9 @@ no sh
 exit
 
 ip domain-name gyak.hu
-cry k generate rsa 2048
-username admin_Perth privilige 15 pass QWasdf/789
+cry k generate rsa
+2048
+username admin_Perth privileg 15 pass QWasdf/789
 ip ssh ver 2
 line vty 0 15
 login local
